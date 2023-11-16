@@ -117,18 +117,20 @@
 // );
 // console.log("begin", begin);
 
-// let obj = {
-//   a: 2,
-//   b: 3,
-//   c: 4,
-// };
-// let sum = 0;
+let obj = {
+  a: 2,
+  b: 3,
+  c: 4,
+};
+let sum = 0;
 
-// for (i in obj) {
-//   console.log("i", i);
-//   obj[i] = obj[i] * 2;
-//   sum = sum + obj[i]; //it gets updated value for adding
-// }
+for (i in obj) {
+  if (obj[i] > 2) console.log(i);
+
+  //   console.log("i", i);
+  //   obj[i] = obj[i] * 2;
+  //   sum = sum + obj[i]; //it gets updated value for adding
+}
 // console.log("obj", obj, sum);
 
 // let valueSum = Object.values(obj).reduce((acc, elem) => (acc = acc + elem), 0);

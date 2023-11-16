@@ -115,49 +115,51 @@
 // revWords("  Hello  World   ")
 
 // const checkBrackets = (str) => {
-
-//     let stack = []
-// for(let i = 0; i< str.length; i++){
-//     let char = str[i]
-//     if(char == '(' || char == '{' || char == '['){
-//         stack.push(char)
+//   let stack = [];
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+//     if (char == "(" || char == "{" || char == "[") {
+//       stack.push(char);
+//     } else if (char == ")" || char == "}" || char == "]") {
+//       if (isEmpty(stack)) {
+//         return false;
+//       }
+//       let top = stack.pop();
+//       if (
+//         (top == "(" && char !== ")") ||
+//         (top == "{" && char !== "}") ||
+//         (top == "[" && char !== "]")
+//       ) {
+//         return false;
+//       }
 //     }
-//     else if(char == ')' || char == '}' || char == ']'){
-//         if(isEmpty(stack)){
-//             return false
-//         }
-//         let top = stack.pop()
-//         if((char == '(' && char !== ')') || (char == '{' && char !== '}') || (char == '[' && char !== ']')){
-//             return false
-//         }
-//     }
-// }
-// return isEmpty(stack)
-
-// }
+//   }
+//   return isEmpty(stack);
+// };
 
 // const isEmpty = (stack) => {
-// return stack.length === 0
-// }
+//   return stack.length === 0;
+// };
 
-// const string1 = "([{}])";
-// console.log(checkBrackets(string1))
+// const string1 = "(]";
 
-// const slidingWindow = (arr,k) => {
-//     let res = []
-//     for(let i =0; i<= arr.length - k; i++){
-//         let max = arr[i]
-//         for(let j = 1; j< k; j++){
-//             if(arr[j+i] > max){
-//                 max = arr[j+i]
-//             }
-//         }
-//         res.push(max)
+// console.log(checkBrackets(string1));
+
+// const slidingWindow = (arr, k) => {
+//   let res = [];
+//   for (let i = 0; i <= arr.length - k; i++) {
+//     let max = arr[i];
+//     for (let j = 1; j < k; j++) {
+//       if (arr[j + i] > max) {
+//         max = arr[j + i];
+//       }
 //     }
-//     console.log(res)
-// }
+//     res.push(max);
+//   }
+//   console.log(res);
+// };
 
-// slidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3)
+// slidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3);
 
 // const checkHamming = (str1,str2) => {
 //     str1 = str1.toString(2)
@@ -213,7 +215,7 @@
 //     let one = 0
 //     let two = 0
 //     let last = nums.length
- 
+
 //     for(let  i of nums){
 //         if(i === 0) zero++
 //         else if(i === 1) one++
@@ -222,12 +224,12 @@
 //     for(let j = 0; j< last;j++){
 //        if(j<zero)
 //            nums[j] = 0
-       
+
 //        else if(j >= zero && j < (zero+one)) nums[j] = 1
 //        else nums[j] = 2
-       
+
 //     }
 //     return nums
- 
+
 //  };
 // sortColors([2,0,2,1,1,0])
